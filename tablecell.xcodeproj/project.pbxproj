@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		2F670E121DFF3F1F005DB7A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E111DFF3F1F005DB7A0 /* main.m */; };
 		2F670E151DFF3F1F005DB7A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E141DFF3F1F005DB7A0 /* AppDelegate.m */; };
-		2F670E181DFF3F1F005DB7A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E171DFF3F1F005DB7A0 /* ViewController.m */; };
 		2F670E1B1DFF3F1F005DB7A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F670E191DFF3F1F005DB7A0 /* Main.storyboard */; };
 		2F670E1D1DFF3F1F005DB7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F670E1C1DFF3F1F005DB7A0 /* Assets.xcassets */; };
 		2F670E201DFF3F1F005DB7A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F670E1E1DFF3F1F005DB7A0 /* LaunchScreen.storyboard */; };
 		2F670E2B1DFF3F1F005DB7A0 /* tablecellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E2A1DFF3F1F005DB7A0 /* tablecellTests.m */; };
 		2F670E361DFF3F1F005DB7A0 /* tablecellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E351DFF3F1F005DB7A0 /* tablecellUITests.m */; };
+		2F670E541DFF618E005DB7A0 /* DiscoverBigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E531DFF618E005DB7A0 /* DiscoverBigCell.m */; };
+		2F670E591DFF61AF005DB7A0 /* DiscoverSinglePicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E561DFF61AF005DB7A0 /* DiscoverSinglePicCell.m */; };
+		2F670E5A1DFF61AF005DB7A0 /* DiscoverTreePicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E581DFF61AF005DB7A0 /* DiscoverTreePicCell.m */; };
+		2F670E5D1DFF61C4005DB7A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E5C1DFF61C4005DB7A0 /* ViewController.m */; };
+		2F670E5F1DFF61DE005DB7A0 /* USA.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F670E5E1DFF61DE005DB7A0 /* USA.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +43,6 @@
 		2F670E111DFF3F1F005DB7A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F670E131DFF3F1F005DB7A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F670E141DFF3F1F005DB7A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2F670E161DFF3F1F005DB7A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2F670E171DFF3F1F005DB7A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2F670E1A1DFF3F1F005DB7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F670E1C1DFF3F1F005DB7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F670E1F1DFF3F1F005DB7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 		2F670E311DFF3F1F005DB7A0 /* tablecellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tablecellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F670E351DFF3F1F005DB7A0 /* tablecellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tablecellUITests.m; sourceTree = "<group>"; };
 		2F670E371DFF3F1F005DB7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F670E521DFF618E005DB7A0 /* DiscoverBigCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverBigCell.h; sourceTree = "<group>"; };
+		2F670E531DFF618E005DB7A0 /* DiscoverBigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverBigCell.m; sourceTree = "<group>"; };
+		2F670E551DFF61AF005DB7A0 /* DiscoverSinglePicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverSinglePicCell.h; sourceTree = "<group>"; };
+		2F670E561DFF61AF005DB7A0 /* DiscoverSinglePicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverSinglePicCell.m; sourceTree = "<group>"; };
+		2F670E571DFF61AF005DB7A0 /* DiscoverTreePicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTreePicCell.h; sourceTree = "<group>"; };
+		2F670E581DFF61AF005DB7A0 /* DiscoverTreePicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTreePicCell.m; sourceTree = "<group>"; };
+		2F670E5B1DFF61C4005DB7A0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2F670E5C1DFF61C4005DB7A0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2F670E5E1DFF61DE005DB7A0 /* USA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USA.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +114,15 @@
 			children = (
 				2F670E131DFF3F1F005DB7A0 /* AppDelegate.h */,
 				2F670E141DFF3F1F005DB7A0 /* AppDelegate.m */,
-				2F670E161DFF3F1F005DB7A0 /* ViewController.h */,
-				2F670E171DFF3F1F005DB7A0 /* ViewController.m */,
+				2F670E521DFF618E005DB7A0 /* DiscoverBigCell.h */,
+				2F670E551DFF61AF005DB7A0 /* DiscoverSinglePicCell.h */,
+				2F670E561DFF61AF005DB7A0 /* DiscoverSinglePicCell.m */,
+				2F670E571DFF61AF005DB7A0 /* DiscoverTreePicCell.h */,
+				2F670E581DFF61AF005DB7A0 /* DiscoverTreePicCell.m */,
+				2F670E531DFF618E005DB7A0 /* DiscoverBigCell.m */,
+				2F670E5E1DFF61DE005DB7A0 /* USA.png */,
+				2F670E5B1DFF61C4005DB7A0 /* ViewController.h */,
+				2F670E5C1DFF61C4005DB7A0 /* ViewController.m */,
 				2F670E191DFF3F1F005DB7A0 /* Main.storyboard */,
 				2F670E1C1DFF3F1F005DB7A0 /* Assets.xcassets */,
 				2F670E1E1DFF3F1F005DB7A0 /* LaunchScreen.storyboard */,
@@ -207,6 +225,7 @@
 				TargetAttributes = {
 					2F670E0C1DFF3F1F005DB7A0 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ACLXBB93CG;
 						ProvisioningStyle = Automatic;
 					};
 					2F670E251DFF3F1F005DB7A0 = {
@@ -249,6 +268,7 @@
 				2F670E201DFF3F1F005DB7A0 /* LaunchScreen.storyboard in Resources */,
 				2F670E1D1DFF3F1F005DB7A0 /* Assets.xcassets in Resources */,
 				2F670E1B1DFF3F1F005DB7A0 /* Main.storyboard in Resources */,
+				2F670E5F1DFF61DE005DB7A0 /* USA.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F670E181DFF3F1F005DB7A0 /* ViewController.m in Sources */,
 				2F670E151DFF3F1F005DB7A0 /* AppDelegate.m in Sources */,
+				2F670E541DFF618E005DB7A0 /* DiscoverBigCell.m in Sources */,
+				2F670E5D1DFF61C4005DB7A0 /* ViewController.m in Sources */,
+				2F670E5A1DFF61AF005DB7A0 /* DiscoverTreePicCell.m in Sources */,
 				2F670E121DFF3F1F005DB7A0 /* main.m in Sources */,
+				2F670E591DFF61AF005DB7A0 /* DiscoverSinglePicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +447,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ACLXBB93CG;
 				INFOPLIST_FILE = tablecell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njhbkhuk.www.tablecell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,7 +460,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ACLXBB93CG;
 				INFOPLIST_FILE = tablecell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.njhbkhuk.www.tablecell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +534,7 @@
 				2F670E3C1DFF3F1F005DB7A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F670E3D1DFF3F1F005DB7A0 /* Build configuration list for PBXNativeTarget "tablecellTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +543,7 @@
 				2F670E3F1DFF3F1F005DB7A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F670E401DFF3F1F005DB7A0 /* Build configuration list for PBXNativeTarget "tablecellUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +552,7 @@
 				2F670E421DFF3F1F005DB7A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

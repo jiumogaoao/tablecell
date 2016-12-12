@@ -1,14 +1,14 @@
 //
 //  ViewController.h
-//  tablecell
+//  CustomCell
 //
 //  Created by 高志强 on 2016/12/13.
-//  Copyright © 2016年 高志强. All rights reserved.
+//  Copyright © 2016年 tony. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
 
 @end
