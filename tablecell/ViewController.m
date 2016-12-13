@@ -31,6 +31,7 @@
     cellHeight=[[NSMutableArray alloc] init];
     size=[UIScreen mainScreen].bounds.size.width/750;
     //设置可重用单元格标识与单元格类型
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[DiscoverBigCell class]  forCellReuseIdentifier:DiscoverBigIdentifier];
     [self.tableView registerClass:[DiscoverSinglePicCell class]  forCellReuseIdentifier:DiscoverSinglePicIdentifier];
     [self.tableView registerClass:[DiscoverTreePicCell class]  forCellReuseIdentifier:DiscoverTreePicIdentifier];
@@ -47,13 +48,13 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DiscoverBigCell *cellBig = [tableView dequeueReusableCellWithIdentifier:DiscoverBigIdentifier forIndexPath:indexPath];
-    DiscoverSinglePicCell *cellSingle = [tableView dequeueReusableCellWithIdentifier:DiscoverSinglePicIdentifier forIndexPath:indexPath];
-    DiscoverTreePicCell *cellTree = [tableView dequeueReusableCellWithIdentifier:DiscoverTreePicIdentifier forIndexPath:indexPath];
+    
+    
 
 
     if([indexPath row] == 0){
-        [cellHeight insertObject:@(370*size) atIndex:[indexPath row]];
+        DiscoverBigCell *cellBig = [tableView dequeueReusableCellWithIdentifier:DiscoverBigIdentifier forIndexPath:indexPath];
+        [cellHeight insertObject:@(408*size) atIndex:[indexPath row]];
         cellBig.cellTitle.text = @"2016全球精准医疗（中国）峰会圆满召开！";
         
         NSString *imageFile = @"USA";
@@ -63,7 +64,8 @@
         returnCell = cellBig;
     }
     if([indexPath row] == 1){
-        [cellHeight insertObject:@(150*size) atIndex:[indexPath row]];
+        DiscoverSinglePicCell *cellSingle = [tableView dequeueReusableCellWithIdentifier:DiscoverSinglePicIdentifier forIndexPath:indexPath];
+        [cellHeight insertObject:@(196*size) atIndex:[indexPath row]];
         cellSingle.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
         
         NSString *imageFile = @"USA";
@@ -77,7 +79,9 @@
         returnCell = cellSingle;
     }
     if([indexPath row] == 2){
-        [cellHeight insertObject:@(240*size) atIndex:[indexPath row]];
+        
+        DiscoverTreePicCell *cellTree = [tableView dequeueReusableCellWithIdentifier:DiscoverTreePicIdentifier forIndexPath:indexPath];
+        [cellHeight insertObject:@(286*size) atIndex:[indexPath row]];
         cellTree.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
         
         NSString *imageFile = @"USA";
@@ -107,5 +111,6 @@
     }
     return h;
 }
+
 
 @end
