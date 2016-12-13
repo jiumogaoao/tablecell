@@ -11,6 +11,7 @@
 @interface DiscoverSinglePicCell : UITableViewCell
 @property (strong, nonatomic) UILabel *cellTitle;
 @property (strong, nonatomic) UILabel *cellParise;
+@property (strong, nonatomic) UILabel *cellPariseIcon;
 @property (strong, nonatomic) UILabel *cellDate;
 @property (strong, nonatomic) UIImageView *cellImage;
 @end

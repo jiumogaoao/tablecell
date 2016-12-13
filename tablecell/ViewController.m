@@ -11,10 +11,16 @@
 #import "DiscoverSinglePicCell.h"
 #import "DiscoverTreePicCell.h"
 
-#define cellIdentifier @"CellIdentifier"
+#define DiscoverBigIdentifier @"DiscoverBigIdentifier"
+#define DiscoverSinglePicIdentifier @"DiscoverSinglePicIdentifier"
+#define DiscoverTreePicIdentifier @"DiscoverTreePicIdentifier"
 
 @interface ViewController ()
-
+{
+    NSMutableArray *cellHeight;
+    UITableViewCell *returnCell;
+    CGFloat size;
+}
 
 @end
 
@@ -22,11 +28,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    cellHeight=[[NSMutableArray alloc] init];
+    size=[UIScreen mainScreen].bounds.size.width/750;
     //设置可重用单元格标识与单元格类型
-    //[self.tableView registerClass:[DiscoverBigCell class]  forCellReuseIdentifier:cellIdentifier];
-    //[self.tableView registerClass:[DiscoverSinglePicCell class]  forCellReuseIdentifier:cellIdentifier];
-    [self.tableView registerClass:[DiscoverTreePicCell class]  forCellReuseIdentifier:cellIdentifier];
+    [self.tableView registerClass:[DiscoverBigCell class]  forCellReuseIdentifier:DiscoverBigIdentifier];
+    [self.tableView registerClass:[DiscoverSinglePicCell class]  forCellReuseIdentifier:DiscoverSinglePicIdentifier];
+    [self.tableView registerClass:[DiscoverTreePicCell class]  forCellReuseIdentifier:DiscoverTreePicIdentifier];
 }
 
 
@@ -36,52 +43,69 @@
 
 #pragma mark --UITableViewDataSource 协议方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-/*
-    DiscoverBigCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    DiscoverBigCell *cellBig = [tableView dequeueReusableCellWithIdentifier:DiscoverBigIdentifier forIndexPath:indexPath];
+    DiscoverSinglePicCell *cellSingle = [tableView dequeueReusableCellWithIdentifier:DiscoverSinglePicIdentifier forIndexPath:indexPath];
+    DiscoverTreePicCell *cellTree = [tableView dequeueReusableCellWithIdentifier:DiscoverTreePicIdentifier forIndexPath:indexPath];
 
-    cell.cellTitle.text = @"2016全球精准医疗（中国）峰会圆满召开！";
-    
-    NSString *imageFile = @"USA";
-    NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
 
-    cell.cellImage.image = [UIImage imageNamed:imagePath];
-  */
-  /*
-    DiscoverSinglePicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    if([indexPath row] == 0){
+        [cellHeight insertObject:@(370*size) atIndex:[indexPath row]];
+        cellBig.cellTitle.text = @"2016全球精准医疗（中国）峰会圆满召开！";
+        
+        NSString *imageFile = @"USA";
+        NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
+        
+        cellBig.cellImage.image = [UIImage imageNamed:imagePath];
+        returnCell = cellBig;
+    }
+    if([indexPath row] == 1){
+        [cellHeight insertObject:@(150*size) atIndex:[indexPath row]];
+        cellSingle.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
+        
+        NSString *imageFile = @"USA";
+        NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
+        
+        cellSingle.cellImage.image = [UIImage imageNamed:imagePath];
+        
+        cellSingle.cellParise.text = @"23";
+        
+        cellSingle.cellDate.text= @"2016/12/06";
+        returnCell = cellSingle;
+    }
+    if([indexPath row] == 2){
+        [cellHeight insertObject:@(240*size) atIndex:[indexPath row]];
+        cellTree.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
+        
+        NSString *imageFile = @"USA";
+        NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
+        
+        cellTree.cellImageLeft.image = [UIImage imageNamed:imagePath];
+        
+        cellTree.cellImageCenter.image = [UIImage imageNamed:imagePath];
+        
+        cellTree.cellImageRight.image = [UIImage imageNamed:imagePath];
+        
+        cellTree.cellParise.text = @"24";
+        
+        cellTree.cellDate.text= @"2016/12/06";
+       returnCell = cellTree;
+    }    
     
-    cell.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
-    
-    NSString *imageFile = @"USA";
-    NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
-    
-    cell.cellImage.image = [UIImage imageNamed:imagePath];
-    
-    cell.cellParise.text = @"23";
-    
-    cell.cellDate.text= @"2016/12/06";
-
-*/
-    DiscoverTreePicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    cell.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
-    
-    NSString *imageFile = @"USA";
-    NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
-    
-    cell.cellImageLeft.image = [UIImage imageNamed:imagePath];
-    
-    cell.cellImageCenter.image = [UIImage imageNamed:imagePath];
-    
-    cell.cellImageRight.image = [UIImage imageNamed:imagePath];
-    
-    cell.cellParise.text = @"23";
-    
-    cell.cellDate.text= @"2016/12/06";
-    return cell;
+    return returnCell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat h=100;
+    if(cellHeight.count > [indexPath row]){
+        NSNumber *hh=[cellHeight objectAtIndex:[indexPath row]];
+        h=[hh floatValue];
+        NSLog(@"%ld",(long)[indexPath row]);
+        NSLog(@"%f",h);
+    }
+    return h;
 }
 
 @end

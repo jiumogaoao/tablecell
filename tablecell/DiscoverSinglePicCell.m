@@ -26,13 +26,17 @@
         
         /// 2.添加标题
         
-        self.cellTitle = [[UILabel alloc] initWithFrame:CGRectMake(20*size,0, 469*size, 114*size)];
-        self.cellTitle.font=[UIFont fontWithName:@"Arial" size:30*size];
+        self.cellTitle = [[UILabel alloc] initWithFrame:CGRectMake(20*size,0, 469*size, 22*size)];
+        self.cellTitle.font=[UIFont fontWithName:@"Arial" size:22*size];
         [self addSubview:self.cellTitle];
         
         /// 2.添加赞
+        self.cellPariseIcon = [[UILabel alloc] initWithFrame:CGRectMake(20*size,210*size, 110*size, 28*size)];
+        self.cellPariseIcon.font =[UIFont fontWithName:@"iconfont" size:14];
+        self.cellPariseIcon.textColor=[UIColor colorWithWhite:0.6 alpha:1];
+        [self addSubview:self.cellPariseIcon];
         
-        self.cellParise = [[UILabel alloc] initWithFrame:CGRectMake(20*size,112*size, 110*size, 28*size)];
+        self.cellParise = [[UILabel alloc] initWithFrame:CGRectMake(60*size,112*size, 110*size, 28*size)];
         self.cellParise.font=[UIFont fontWithName:@"Arial" size:22*size];
         self.cellParise.textColor=[UIColor colorWithWhite:0.6 alpha:1];
         [self addSubview:self.cellParise];
