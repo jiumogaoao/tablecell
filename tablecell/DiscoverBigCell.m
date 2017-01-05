@@ -7,13 +7,13 @@
 //
 
 #import "DiscoverBigCell.h"
-
+#import "Header.h"
 @implementation DiscoverBigCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    CGFloat size=[UIScreen mainScreen].bounds.size.width/750;
+    CGFloat size=K_mainWidth/750;
     if (self) {
         
         //单元格的宽度

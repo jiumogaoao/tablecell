@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F480FA71E1E3B1100CAEF6A /* DiscoverDscPicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F480FA61E1E3B1100CAEF6A /* DiscoverDscPicCell.m */; };
+		2F480FAA1E1E4B5B00CAEF6A /* DiscoverDscCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F480FA91E1E4B5B00CAEF6A /* DiscoverDscCell.m */; };
 		2F5B5E781DFF83D8007279F2 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5B5E771DFF83D8007279F2 /* iconfont.ttf */; };
 		2F670E121DFF3F1F005DB7A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E111DFF3F1F005DB7A0 /* main.m */; };
 		2F670E151DFF3F1F005DB7A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F670E141DFF3F1F005DB7A0 /* AppDelegate.m */; };
@@ -40,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F480FA41E1E386C00CAEF6A /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		2F480FA51E1E3B1100CAEF6A /* DiscoverDscPicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverDscPicCell.h; sourceTree = "<group>"; };
+		2F480FA61E1E3B1100CAEF6A /* DiscoverDscPicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverDscPicCell.m; sourceTree = "<group>"; };
+		2F480FA81E1E4B5B00CAEF6A /* DiscoverDscCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverDscCell.h; sourceTree = "<group>"; };
+		2F480FA91E1E4B5B00CAEF6A /* DiscoverDscCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverDscCell.m; sourceTree = "<group>"; };
 		2F5B5E771DFF83D8007279F2 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		2F670E0D1DFF3F1F005DB7A0 /* tablecell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tablecell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F670E111DFF3F1F005DB7A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +121,7 @@
 		2F670E0F1DFF3F1F005DB7A0 /* tablecell */ = {
 			isa = PBXGroup;
 			children = (
+				2F480FA41E1E386C00CAEF6A /* Header.h */,
 				2F670E131DFF3F1F005DB7A0 /* AppDelegate.h */,
 				2F670E141DFF3F1F005DB7A0 /* AppDelegate.m */,
 				2F670E521DFF618E005DB7A0 /* DiscoverBigCell.h */,
@@ -122,6 +130,8 @@
 				2F670E561DFF61AF005DB7A0 /* DiscoverSinglePicCell.m */,
 				2F670E571DFF61AF005DB7A0 /* DiscoverTreePicCell.h */,
 				2F670E581DFF61AF005DB7A0 /* DiscoverTreePicCell.m */,
+				2F480FA51E1E3B1100CAEF6A /* DiscoverDscPicCell.h */,
+				2F480FA61E1E3B1100CAEF6A /* DiscoverDscPicCell.m */,
 				2F670E5E1DFF61DE005DB7A0 /* USA.png */,
 				2F670E5B1DFF61C4005DB7A0 /* ViewController.h */,
 				2F670E5C1DFF61C4005DB7A0 /* ViewController.m */,
@@ -131,6 +141,8 @@
 				2F670E1E1DFF3F1F005DB7A0 /* LaunchScreen.storyboard */,
 				2F670E211DFF3F1F005DB7A0 /* Info.plist */,
 				2F670E101DFF3F1F005DB7A0 /* Supporting Files */,
+				2F480FA81E1E4B5B00CAEF6A /* DiscoverDscCell.h */,
+				2F480FA91E1E4B5B00CAEF6A /* DiscoverDscCell.m */,
 			);
 			path = tablecell;
 			sourceTree = "<group>";
@@ -302,7 +314,9 @@
 				2F670E5D1DFF61C4005DB7A0 /* ViewController.m in Sources */,
 				2F670E5A1DFF61AF005DB7A0 /* DiscoverTreePicCell.m in Sources */,
 				2F670E121DFF3F1F005DB7A0 /* main.m in Sources */,
+				2F480FAA1E1E4B5B00CAEF6A /* DiscoverDscCell.m in Sources */,
 				2F670E591DFF61AF005DB7A0 /* DiscoverSinglePicCell.m in Sources */,
+				2F480FA71E1E3B1100CAEF6A /* DiscoverDscPicCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

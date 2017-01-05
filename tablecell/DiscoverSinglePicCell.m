@@ -7,13 +7,13 @@
 //
 
 #import "DiscoverSinglePicCell.h"
-
+#import "Header.h"
 @implementation DiscoverSinglePicCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    CGFloat size=[UIScreen mainScreen].bounds.size.width/750;
+    CGFloat size=K_mainWidth/750;
     if (self) {
         
         //单元格的宽度
@@ -34,6 +34,7 @@
         self.cellPariseIcon = [[UILabel alloc] initWithFrame:CGRectMake(20*size,210*size, 110*size, 28*size)];
         self.cellPariseIcon.font =[UIFont fontWithName:@"iconfont" size:14];
         self.cellPariseIcon.textColor=[UIColor colorWithWhite:0.6 alpha:1];
+        self.cellPariseIcon.text=@"/uE654";
         [self addSubview:self.cellPariseIcon];
         
         self.cellParise = [[UILabel alloc] initWithFrame:CGRectMake(60*size,112*size, 110*size, 28*size)];

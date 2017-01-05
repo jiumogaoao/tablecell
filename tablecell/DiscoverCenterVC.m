@@ -1,44 +1,48 @@
 //
-//  ViewController.m
-//  CustomCell
+//  DiscoverCenterVC.m
+//  BigHealthy
 //
-//  Created by 高志强 on 2016/12/13.
-//  Copyright © 2016年 tony. All rights reserved.
+//  Created by 高志强 on 2016/11/29.
+//  Copyright © 2016年 Wikky. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DiscoverCenterVC.h"
+#import "Header.h"
+#import "APIConnect.h"
 #import "DiscoverBigCell.h"
 #import "DiscoverSinglePicCell.h"
 #import "DiscoverTreePicCell.h"
-#import "DiscoverDscPicCell.h"
-#import "DiscoverDscCell.h"
+
 #define DiscoverBigIdentifier @"DiscoverBigIdentifier"
 #define DiscoverSinglePicIdentifier @"DiscoverSinglePicIdentifier"
 #define DiscoverTreePicIdentifier @"DiscoverTreePicIdentifier"
-#define DiscoverDscPicIdentifier @"DiscoverDscPicIdentifier"
-#define DiscoverDscIdentifier @"DiscoverDscIdentifier"
-@interface ViewController ()
+@interface DiscoverCenterVC ()<UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray *cellHeight;
     UITableViewCell *returnCell;
     CGFloat size;
 }
-
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
-@implementation ViewController
+@implementation DiscoverCenterVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:YMAKE(18)],NSFontAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
+    self.title=@"发现";
+    self.tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, K_mainWidth, K_mainHeight)];
+    self.tableView.delegate=self;
+    self.tableView.dataSource=self;
+    [self.view addSubview:self.tableView];
     cellHeight=[[NSMutableArray alloc] init];
-    size=[UIScreen mainScreen].bounds.size.width/750;
+    size=K_mainWidth/750;
     //设置可重用单元格标识与单元格类型
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[DiscoverBigCell class]  forCellReuseIdentifier:DiscoverBigIdentifier];
     [self.tableView registerClass:[DiscoverSinglePicCell class]  forCellReuseIdentifier:DiscoverSinglePicIdentifier];
     [self.tableView registerClass:[DiscoverTreePicCell class]  forCellReuseIdentifier:DiscoverTreePicIdentifier];
-    [self.tableView registerClass:[DiscoverDscPicCell class]  forCellReuseIdentifier:DiscoverDscPicIdentifier];
-    [self.tableView registerClass:[DiscoverDscCell class]  forCellReuseIdentifier:DiscoverDscIdentifier];
 }
 
 
@@ -48,14 +52,14 @@
 
 #pragma mark --UITableViewDataSource 协议方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
-
-
+    
+    
     if([indexPath row] == 0){
         DiscoverBigCell *cellBig = [tableView dequeueReusableCellWithIdentifier:DiscoverBigIdentifier forIndexPath:indexPath];
         [cellHeight insertObject:@(408*size) atIndex:[indexPath row]];
@@ -64,7 +68,7 @@
         NSString *imageFile = @"USA";
         NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
         
-        cellBig.cellImage.image = [UIImage imageNamed:imagePath];
+        cellBig.cellImage.image = [UIImage imageNamed:@"member_active"];
         returnCell = cellBig;
     }
     if([indexPath row] == 1){
@@ -75,7 +79,7 @@
         NSString *imageFile = @"USA";
         NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
         
-        cellSingle.cellImage.image = [UIImage imageNamed:imagePath];
+        cellSingle.cellImage.image = [UIImage imageNamed:@"member_active"];
         
         cellSingle.cellParise.text = @"23";
         
@@ -91,47 +95,18 @@
         NSString *imageFile = @"USA";
         NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
         
-        cellTree.cellImageLeft.image = [UIImage imageNamed:imagePath];
+        cellTree.cellImageLeft.image = [UIImage imageNamed:@"member_active"];
         
-        cellTree.cellImageCenter.image = [UIImage imageNamed:imagePath];
+        cellTree.cellImageCenter.image = [UIImage imageNamed:@"member_active"];
         
-        cellTree.cellImageRight.image = [UIImage imageNamed:imagePath];
+        cellTree.cellImageRight.image = [UIImage imageNamed:@"member_active"];
         
         cellTree.cellParise.text = @"24";
         
         cellTree.cellDate.text= @"2016/12/06";
-       returnCell = cellTree;
-    }    
-    if([indexPath row] == 3){
-        
-        DiscoverDscPicCell *cellFour = [tableView dequeueReusableCellWithIdentifier:DiscoverDscPicIdentifier forIndexPath:indexPath];
-        [cellHeight insertObject:@(286*size) atIndex:[indexPath row]];
-        cellFour.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
-        cellFour.cellDsc.text=@"很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多描述";
-        NSString *imageFile = @"USA";
-        NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
-        
-        cellFour.cellImage.image = [UIImage imageNamed:imagePath];
-        
-        cellFour.cellParise.text = @"24";
-        
-        cellFour.cellDate.text= @"2016/12/06";
-        returnCell = cellFour;
+        returnCell = cellTree;
     }
-    if([indexPath row] == 4){
-        
-        DiscoverDscCell *cellFour = [tableView dequeueReusableCellWithIdentifier:DiscoverDscIdentifier forIndexPath:indexPath];
-        [cellHeight insertObject:@(286*size) atIndex:[indexPath row]];
-        cellFour.cellTitle.text = @"健康医疗科技精准对接会暨陕西省国家临床医学研究中心";
-        cellFour.cellDsc.text=@"很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多很多描述";
-        NSString *imageFile = @"USA";
-        NSString *imagePath = [[NSString alloc] initWithFormat:@"%@.png", imageFile];
-        
-        cellFour.cellParise.text = @"24";
-        
-        cellFour.cellDate.text= @"2016/12/06";
-        returnCell = cellFour;
-    }
+    
     return returnCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -139,11 +114,8 @@
     if(cellHeight.count > [indexPath row]){
         NSNumber *hh=[cellHeight objectAtIndex:[indexPath row]];
         h=[hh floatValue];
-        NSLog(@"%ld",(long)[indexPath row]);
-        NSLog(@"%f",h);
     }
     return h;
 }
-
 
 @end
